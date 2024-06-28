@@ -7,23 +7,26 @@ import Link from "next/link";
 
 export default function SignIn() {
   return (
-    <main className="p-2.5 w-screen h-screen grid grid-rows-[75%,25%] border">
-      <section className="border ">
+    <main className="p-2.5 w-screen h-screen grid">
+      <section className="grid">
         <div>
           <Back />
         </div>
-        <div className="inline-flex flex-col relative">
-          <h3 className="text-lg font-semibold z-50">Log in to Chatbox</h3>
-          <div
-            style={{
-              width: "3rem",
-              height: "0.3rem",
-              backgroundColor: "#10B981",
-              position: "absolute",
-              bottom: "2px",
-            }}
-          ></div>
+        <div>
+          <div className="inline-flex flex-col relative">
+            <h3 className="text-lg font-semibold z-50 ">Log in to Chatbox</h3>
+            <div
+              style={{
+                width: "3rem",
+                height: "0.3rem",
+                backgroundColor: "#10B981",
+                position: "absolute",
+                bottom: "2px",
+              }}
+            ></div>
+          </div>
         </div>
+
         <p className="font-medium text-sm text-gray-500">
           Welcome back! Sign in using your social account or email to continue
           us
@@ -51,7 +54,7 @@ export default function SignIn() {
           <div className="flex-grow border-t border-gray-500"></div>
         </div>
 
-        <form className="grid border gap-2">
+        <form className="grid gap-2">
           <label htmlFor="email" className="text-sm text-green-500">
             Your email
           </label>
@@ -69,14 +72,14 @@ export default function SignIn() {
         </form>
       </section>
 
-      <div className="border " style={{ height: "100px" }}>
+      <div className="grid items-end">
         <button
           href=""
           className="w-full h-12 bg-gray-200 rounded-3xl font-semibold text-gray-500"
         >
           Log in
         </button>
-        <p className="text-sm text-green-500">Forgot password?</p>
+        <p className="text-sm text-green-500 text-center">Forgot password?</p>
       </div>
     </main>
   );
