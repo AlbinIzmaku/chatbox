@@ -1,5 +1,5 @@
 import Back from "@/svg/back";
-import Ellipse from "@/svg/ellipse";
+import Ellipse from "@/svg/ellipseSvg";
 import Facebook from "@/svg/facebook";
 import Google from "@/svg/google";
 import BlackApple from "@/svg/blackApple";

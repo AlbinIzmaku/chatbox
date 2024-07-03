@@ -2,7 +2,7 @@ import Image from "next/image";
 import smallLogo from "/public/smallLogo.png";
 import smallShadowLogo from "/public/smallShadowLogo.png";
 import Apple from "@/svg/apple";
-import Ellipse from "@/svg/ellipse";
+import Ellipse from "@/svg/ellipseSvg";
 import Google from "@/svg/google";
 import Facebook from "@/svg/facebook";
 import Link from "next/link";

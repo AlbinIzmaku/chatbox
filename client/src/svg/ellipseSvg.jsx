@@ -1,4 +1,4 @@
-export default function Ellipse({ children }) {
+export default function EllipseSvg({ children }) {
   return (
     <svg
       width="48"
