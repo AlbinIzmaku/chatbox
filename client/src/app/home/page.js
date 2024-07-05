@@ -3,6 +3,7 @@ import Ellipse from "../components/ellipse";
 import Rectangle from "../components/rectangle";
 import Online from "../components/online";
 import MessageNotification from "../components/messageNotification";
+import NavBar from "../components/navBar";
 
 export default function Home() {
   const users = [
@@ -24,21 +25,21 @@ export default function Home() {
   ];
   return (
     <main
-      className="bg-gray-900 w-screen h-screen text-white pt-2 overflow-hidden"
+      className="bg-gray-900 w-screen h-screen text-white pt-2 pb-20 overflow-hidden relative"
       style={{
         display: "grid",
         gridTemplateRows: "44px 82px auto",
         gap: "30px",
       }}
     >
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center mx-6">
         <Ellipse>
           <Search />
         </Ellipse>
         <h3 className="text-xl">Home</h3>
         <Ellipse>A</Ellipse>
       </div>
-      <div className="overflow-x-scroll flex gap-1 h-12">
+      <div className="mx-6 overflow-x-scroll flex gap-4 h-12">
         {users.map((user) => {
           return <Ellipse key={user.id}>A</Ellipse>;
         })}
@@ -53,7 +54,7 @@ export default function Home() {
             <div
               key={user.id}
               className="grid justify-between items-center mx-4 my-6"
-              style={{gridTemplateColumns: '15% 50% 30%'}}
+              style={{ gridTemplateColumns: "15% 50% 30%" }}
             >
               <div className="relative inline-flex text-black">
                 <Ellipse>A</Ellipse>
@@ -74,25 +75,8 @@ export default function Home() {
             </div>
           );
         })}
-        {/* <div className="border border-green-800 flex justify-between items-center mx-4">
-          <div className="border relative inline-flex">
-            <Ellipse>A</Ellipse>
-            <Online />
-          </div>
-          <div>
-            <h3 className="text-xl text-gray-900">Albin Izmaku</h3>
-            <p className="text-xs text-gray-600">How are you today?</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <p className="text-xs text-gray-600">2 min ago</p>
-            <MessageNotification>
-              <span className="text-xs flex justify-center items-center pb-0.5">
-                3
-              </span>
-            </MessageNotification>
-          </div>
-        </div> */}
       </section>
+      <NavBar />
     </main>
   );
 }
